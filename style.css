@@ -1,0 +1,466 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.main-hero {
+    background: linear-gradient(90deg, rgba(120,9,121,1) 0%, rgba(255,47,0,1) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1; /* Lo sfondo è uno degli elementi più in basso */
+    overflow: hidden; /* Nasconde il contenuto che esce dai limiti */
+}
+
+.hero {
+    position: fixed; /* Rimane fisso */
+    z-index: 5; /* Porta il testo sopra allo sfondo, ma sotto alle sezioni */
+    text-align: center;
+}
+
+.hero h1 {
+    z-index: 5; /* Porta il testo sopra allo sfondo, ma sotto alle sezioni */
+    font-size: 3em;
+    margin: 0;
+    color: #fff;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+.yellow {
+    color: #ffd700;
+}
+
+.hero h1 span {
+    color: #ffd700;
+    z-index: 5; /* Porta il testo sopra allo sfondo, ma sotto alle sezioni */
+}
+
+.hero p {
+    z-index: 5; /* Porta il testo sopra allo sfondo, ma sotto alle sezioni */
+    font-size: 1.5em;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #121212;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    animation: fadeInUp 2.5s ease-in-out;
+    transition: ease-in 0.2s;
+    border: none;
+}
+
+.cta:hover {
+    background-color: #eeff00;
+    transition: ease-in 0.2s;
+}
+
+/* Stile per l'header sticky */
+header {
+    z-index: 1500; /* Assicura che l'header sia sopra la sidebar */
+}
+
+#sticky-header {
+    position: fixed;
+    top: -100; /* Mostra l'header sempre in cima alla pagina */
+    width: 100%;
+    background-color: #1c1c1c;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1500; /* Assicura che l'header sia sopra la sidebar */
+    transition: top 0.4s ease-in-out;
+}
+
+/* Quando viene visualizzato */
+#sticky-header.show {
+    top: 0; /* Mostra l'header */
+    z-index: 1500; /* Assicura che l'header sia sopra la sidebar */
+}
+
+/* Quando viene nascosto */
+#sticky-header.hide {
+    top: -100px; /* Nasconde l'header sopra la finestra */
+    z-index: 1500; /* Assicura che l'header sia sopra la sidebar */
+}
+
+#sticky-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sticky-header .container {
+    display: flex;;
+    align-items: center;
+}
+
+.desktop-menu {
+    display: flex;
+    gap: 40px;
+}
+
+/* Nascondi il menu hamburger su desktop grandi*/
+.sidebar {
+    position: fixed;
+    top: 54px;
+    right: -100%;
+    background-color: #1c1c1c;
+    transition: right 0.5s ease-in;
+    border-bottom: solid 2px grey;
+    border-left: solid 2px grey;
+    border-radius: 0 0 0 20px;
+}
+
+.sidebar.active {
+    top: 54px;
+    right: 0;
+    transition: right 0.5s ease-out;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 50px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    font-size: 2em;
+    transition: ease-in 0.2s;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border-bottom: solid 1px #ffd700;
+    border-left: solid 1px #ffd700;
+    border-radius: 0 0 0 20px;
+}
+
+
+.sidebar ul li a:hover {
+    color: #ffd700;
+    border-bottom: solid 1px grey;
+    border-left: solid 1px grey;
+    transition: ease-in 0.2s;
+}
+
+/*Inizio Hamburger*/
+
+.hamburger-menu i {
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    transition: ease-out 0.2s;
+    right: 10px;
+}
+
+.hamburger-menu i.bx-menu {
+    display: none;
+}
+
+.hamburger-menu i.bx-x {
+    display: none;
+}
+
+.hamburger-menu i.bx-menu.active {
+    display: block;
+}
+
+.hamburger-menu i.bx-x.active {
+    display: block;
+}
+
+/*Fine hamburger*/
+
+.header-title {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: ease-in 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transition: ease-in 0.2s;
+}
+
+/*Sezioni*/
+
+
+#about #contact {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+section {
+    padding: 5% 5%;
+    text-align: center;
+    background-color: #1c1c1c;
+    z-index: 10;
+    position: relative;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+}
+
+#contact {
+    
+    padding-top: 70px;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 60%;
+    font-size: 1.5em;
+    line-height: 50px;
+    font-weight: 400;
+}
+
+.intro-text b {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.projects {
+    transition: ease-in 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 20px 0;
+    gap: 20px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.project {
+    flex: 0 0 300px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: ease-in 0.4s;
+    user-select: none;
+}
+
+.project, .project p, .project img {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.project:hover {
+    transition: ease-in 0.2s;
+    box-shadow: 0 0 25px rgba(80, 80, 80, 0.3);
+}
+
+.project-image {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Stile del form di contatto */
+.contact-form {
+    margin-top: 50px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 50px;
+}
+
+.form-inputs {
+    padding-right: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.2em;
+    color: #ffd700;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: #333 2px solid;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: ease-in 0.2s;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    border: #ffd700 2px solid;
+    transition: ease-in 0.2s;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffd700;
+    color: #121212;
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #eeff00;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    color: #fff;
+    z-index: 100;
+}
+
+footer p {
+    background-color: #121212;
+    
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    transition: ease 0.2s;
+    display: inline-block;
+    text-decoration: none;
+    color: #ffd700; /* Colore dell'icona */
+    font-size: 24px;
+}
+
+.social-icon:hover {
+    transition: ease 0.2s;
+    color: #eeff00; /* Colore dell'icona al passaggio del mouse */
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #ffd700;
+    color: #121212;
+    padding: 7px 12px;
+    border-radius: 50%;
+    font-weight: 800;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.2s ease-in;
+}
+
+#back-to-top:hover {
+    background-color: #eeff00;
+    transition: 0.2s ease-in;
+}
+
+.bx-up-arrow-alt {
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enea Cavanna - Web Developer</title>
+    <meta name="description" content="Web Developer e creatore di esperienze digitali">
+    
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media queries.css">
+    <link rel="stylesheet" href="mobile.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main-hero" id="main-hero">
+        <div class="hero">
+            <h1>Ciao, sono <br> <span>Enea Cavanna</span></h1>
+            <p>Web Developer e creatore di esperienze digitali</p>
+            <a href="#about" class="cta">Scopri di più</a>
+        </div>
+    </div>
+
+    <header id="sticky-header">
+        <div class="container">
+
+            <h2 class="header-title"><span class="yellow"><a href="#main-hero">Enea Cavanna</a></span></h2>   
+            <nav>
+                <ul class="desktop-menu">
+                    <li><a href="#about">Chi sono</a></li>
+                    <li><a href="#projects">Progetti</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </nav>
+
+                
+            
+    
+            <!-- Aggiungi il menu hamburger visibile solo su mobile -->
+            <div class="hamburger-menu mobile">
+                <i class="bx bx-menu"></i>
+                <i class='bx bx-x'></i>
+            </div>
+    
+            <!-- Sidebar per il menu su mobile -->
+            <div class="sidebar mobile">
+                <ul>
+                    <li><a href="#about">Chi sono</a></li>
+                    <li><a href="#projects">Progetti</a></li>
+                    <li><a href="#contact">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+
+    <section id="about">
+        <h2>Chi sono</h2>
+        <p class="intro-text">Sono un <b class="yellow">programmatore italiano</b> con una grande passione per la tecnologia, che ho iniziato a coltivare nel <b class="yellow">2020.</b>
+            <br>
+            <br>
+            Da allora, mi sono dedicato allo sviluppo di soluzioni software innovative, 
+            sfruttando le mie capacità di <b class="yellow">problem-solving</b> per affrontare sfide complesse e migliorare costantemente le mie competenze.
+            <br>
+            <br>
+            Sono sempre alla ricerca di nuove opportunità per crescere e contribuire a progetti che possano fare la differenza.
+            <br>
+            <br>
+            Se stai cercando qualcuno di <b class="yellow">affidabile e competente</b> per sviluppare il tuo sito web, contattami! Posso aiutarti a realizzare un sito unico e funzionale, su misura per le tue esigenze e con <b class="yellow">risultati professionali.</b>
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Progetti</h2>
+
+        <div class="projects">
+            <div class="project">
+                <h3>Sapori Golosi</h3>
+                <p>Un sito di ricette creato attorno agli utenti.</p> 
+                <img src="Images/Sapori-golosi.webp" alt="Sapori Golosi" class="project-image" draggable="false">
+                <br>
+                <a href="https://saporigolosi.com" target="_blank" class="cta">Visita il sito</a>
+            </div>
+            
+            <!-- Aggiungi altri progetti qui -->
+            <div class="project">
+                <h3>Sapori Golosi</h3>
+                <p>Un sito di ricette creato attorno agli utenti.</p> 
+                <img src="Images/Sapori-golosi.webp" alt="Sapori Golosi" class="project-image" draggable="false">
+                <br>
+                <a href="https://saporigolosi.com" target="_blank" class="cta">Visita il sito</a>
+            </div>
+
+            <div class="project">
+                <h3>Sapori Golosi</h3>
+                <p>Un sito di ricette creato attorno agli utenti.</p> 
+                <img src="Images/Sapori-golosi.webp" alt="Sapori Golosi" class="project-image" draggable="false">
+                <br>
+                <a href="https://saporigolosi.com" target="_blank" class="cta">Visita il sito</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contatti</h2>
+        <p>Se hai domande o vuoi collaborare, non esitare ad inviarmi un messaggio utilizzando il form sottostante.</p>
+    
+        <form id="contact-form" action="https://formsubmit.co/d2097b0c6ea10cc245aee32d2aba22fe" method="POST" class="contact-form">
+            <div class="form-inputs">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="La tua email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Il tuo messaggio"></textarea>
+                </div>
+            </div>
+            
+                <input type="hidden" name="_next" value="https://eneacavanna.com">
+                <input type="hidden" name="_captcha" value="false">
+            <button type="submit">INVIA MESSAGGIO</button>
+        </form>
+    </section>
+    
+    
+
+    <footer>
+        <p>&copy; 2024 Enea Cavanna. Tutti i diritti riservati.</p>
+        <div class="social-links">
+            <a href="https://twitter.com/tuo-profilo" target="_blank" class="social-icon"><i class='bx bxl-twitter'></i></a>
+            <a href="https://linkedin.com/in/tuo-profilo" target="_blank" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/tuo-profilo" target="_blank" class="social-icon"><i class='bx bxl-github'></i></a>
+        </div>
+    </footer>
+    
+
+    <div id="back-to-top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </div>    
+
+    <script src="script.js"></script>
+
+    <script>
+        function isMobile() {
+          return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+      
+        if (isMobile()) {
+          const elements = document.querySelectorAll("[class]"); // Seleziona tutti gli elementi con classi
+      
+          elements.forEach((el) => {
+            el.classList.add("mobile"); // Aggiunge la classe mobile
+          });
+        }
+      
+        console.log('Mobile = ' + isMobile());
+      </script>
+</body>
+</html>
